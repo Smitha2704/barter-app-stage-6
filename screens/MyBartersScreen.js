@@ -19,11 +19,7 @@ export default class MyBartersScreen extends Component {
 
 
    getAllBarters =()=>{
-     this.requestRef = db.collection("all_Barters").where("donor_id" ,'==', this.state.userId)
-     .onSnapshot((snapshot)=>{
-       var allBarters = snapshot.docs.map(document => document.data());
-       this.setState({
-         allBarters : allBarters,
+   
        });
      })
    }
